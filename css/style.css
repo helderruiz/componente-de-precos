@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --verde: hsl(179, 62%, 43%);
+    --verde-escuro: hsl(179, 62%, 35%);
+    --amarelo: hsl(71, 73%, 54%);
+    --branco: #fff;
+    --cinza-claro: hsl(204, 43%, 93%);
+    --cinza: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background: var(--cinza-claro);
+}
+
+main {
+    max-width: 800px;
+    background: var(--branco);
+    margin: 0 auto;
+    padding: 1em 2em 0 2em;
+    border-radius: .5em;
+}
+
+.secao-titulo__principal {
+    color: var(--verde);
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+.secao-span {
+    color: var(--amarelo);
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+.secao-paragrafo {
+    color: var(--cinza);
+    font-weight: 400;
+    margin: 1em 0 3em 0;
+}
+
+.secao__secundario {
+    display: flex;
+}
+
+.secao__secundario-direito {
+    width: 50%;
+    background: var(--verde-escuro);
+    padding: 2.5em;
+    margin-left: -2em;
+    flex-grow: 1;
+}
+
+.secao__titulo-direto, 
+.secao__titulo-esquerdo {
+    color: var(--branco);
+    
+}
+
+.secao__preco {
+color: var(--branco);
+font-size: 2em;
+}
+
+.secao__preco p {
+    color: rgba(255, 255, 255, 0.434);
+    font-size: .5em;
+    display: inline-block;
+}
+
+.secao__secundario-paragrafo {
+    color: var(--branco);
+    margin-top: 0;
+    padding-bottom: 2em;
+    line-height: 1.5em;
+    width: 250px;
+}
+
+.botao {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background: var(--amarelo);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.26);
+}
+
+.secao__secundario-esquerdo {
+    width: 50%;
+    background: var(--verde);
+    padding: 2.5em 2.5em 0 2.5em;
+    margin-right: -2em;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 700px) {
+    .secao {
+        width: 90vw;
+    }
+
+    .secao__secundario {
+        flex-direction: column;
+    }
+
+    .secao__secundario-direito, 
+    .secao__secundario-esquerdo {
+        width: 100%;
+        margin: 0;
+    }
+}
